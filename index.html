@@ -14,9 +14,10 @@
         <link href="vendor/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
         <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/animate.css" rel="stylesheet">
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <link href="vendor/swiper/css/swiper.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/layout.min.css" rel="stylesheet" type="text/css"/>
-        <link rel="shortcut icon" href="favicon.ico"/>
+        <link rel="shortcut icon" href="img/logo.ico"/>
     </head>
    
   
@@ -217,7 +218,7 @@
                             <h2>Doreen Mokoena</h2>
                             <p>Founder & CEO</p>
                         </div>
-                        <img class="full-width img-responsive wow fadeInUp" src="img/500x500/01.jpg" alt="Portfolio Image" data-wow-duration=".3" data-wow-delay=".2s">
+                        <img class="full-width img-responsive wow fadeInUp" src="img/500x500/Doreen-500x500.jpg" alt="Portfolio Image" data-wow-duration=".3" data-wow-delay=".2s">
                     </div>
                     <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4">
                         <div class="margin-b-60">
@@ -605,41 +606,55 @@
                 </div>
             </div>
             
-            <!-- Clients -->
-            <div class="content-lg container">
-                <!-- Swiper Clients -->
-                <div class="swiper-slider swiper-clients">
-                    <!-- Swiper Wrapper -->
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img class="swiper-clients-img" src="img/clients/mtnlogo.png" alt="Clients Logo">
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="swiper-clients-img" src="img/clients/1020.png" alt="Clients Logo">
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="swiper-clients-img" src="img/clients/tkr.png" alt="Clients Logo">
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="swiper-clients-img" src="img/clients/favoursea.png" alt="Clients Logo">
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="swiper-clients-img" src="img/clients/motswedingfm.png" alt="Clients Logo">
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="swiper-clients-img" src="img/clients/EFF.png" alt="Clients Logo">
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="swiper-clients-img" src="img/clients/Polmed.png" alt="Clients Logo">
-                        </div>
-                    </div>
-                    <!-- End Swiper Wrapper -->
-                </div>
-                <!-- End Swiper Clients -->
+           <!-- Clients -->
+<div class="content-lg container">
+    <!-- Swiper Clients -->
+    <div class="swiper-slider swiper-clients">
+        <!-- Swiper Wrapper -->
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="https://www.polmed.co.za" target="_blank">
+                    <img class="swiper-clients-img" src="img/clients/Polmed.png" alt="Polmed Logo">
+                </a>
             </div>
-            <!-- End Clients -->
+            <div class="swiper-slide">
+                <a href="https://www.mtn.com" target="_blank">
+                    <img class="swiper-clients-img" src="img/clients/mtnlogo.png" alt="MTN Logo">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="https://1020cartel.com/" target="_blank">
+                    <img class="swiper-clients-img" src="img/clients/1020.png" alt="1020 Global Logo">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="https://www.tkroperations.com/" target="_blank">
+                    <img class="swiper-clients-img" src="img/clients/tkr.png" alt="TKR Logo">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="https://www.favorsea.com/" target="_blank">
+                    <img class="swiper-clients-img" src="img/clients/favoursea.png" alt="Favoursea Logo">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="http://www.motswedingfm.co.za/sabc/home/motswedingfm" target="_blank">
+                    <img class="swiper-clients-img" src="img/clients/motswedingfm.png" alt="Motsweding FM Logo">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="https://www.effonline.org" target="_blank">
+                    <img class="swiper-clients-img" src="img/clients/EFF.png" alt="EFF Logo">
+                </a>
+            </div>
+            
         </div>
-        <!-- End Work -->
+        <!-- End Swiper Wrapper -->
+    </div>
+    <!-- End Swiper Clients -->
+</div>
+<!-- End Clients -->
+
 
   
             
@@ -777,6 +792,25 @@
         <script src="js/components/wow.min.js" type="text/javascript"></script>
         <script src="js/components/swiper.min.js" type="text/javascript"></script>
         <script src="js/components/masonry.min.js" type="text/javascript"></script>
+        <script>
+            var swiper = new Swiper('.swiper-clients', {
+                slidesPerView: 3,   // Number of logos to show at once
+                spaceBetween: 30,   // Space between logos
+                loop: true,         // Enable continuous loop mode
+                autoplay: {
+                    delay: 2000,    // Delay between transitions (in milliseconds)
+                    disableOnInteraction: false, // Continue autoplay after interaction
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        </script>
 
     </body>
     <!-- END BODY -->
